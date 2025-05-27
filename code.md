@@ -64,11 +64,13 @@ EdgeToEdge.configure(
 );
 ```
 
-> 📌 Required import:
+> 📌 Required imports:
 > ```dart
 > import 'package:flutter/services.dart';
-> import 'package:flutter/widgets.dart'; // or wherever EdgeToEdge is defined
+> import 'package:edge_to_edge/edge_to_edge.dart';
 > ```
+
+🔗 [Edge-to-Edge pub.dev page](https://pub.dev/packages/edge_to_edge)
 
 ---
 
