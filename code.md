@@ -5,6 +5,7 @@ This guide provides useful Flutter commands and configurations for:
 - Creating secure APKs and App Bundles
 - Locking screen orientation
 - Enabling edge-to-edge UI in your Flutter app
+- Adding a simple extension for rupee formatting
 
 ---
 
@@ -93,6 +94,27 @@ Insert this inside your app theme:
 
 ---
 
+## 💰 4. Rupees String Extension
+
+Use this simple extension to easily convert strings to rupee format:
+
+```dart
+extension CurrencyExtension on String {
+  String toRupees() {
+    return '₹$this';
+  }
+}
+```
+
+### ✅ Example Usage
+
+```dart
+String price = '250';
+print(price.toRupees()); // Output: ₹250
+```
+
+---
+
 ## ✅ Summary
 
 | Feature              | Code/Command                                         |
@@ -102,6 +124,7 @@ Insert this inside your app theme:
 | Lock Rotation        | `SystemChrome.setPreferredOrientations([...])`       |
 | Edge-to-Edge Flutter | `EdgeToEdge.configure(...)`                          |
 | Edge-to-Edge Android | `<item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>` |
+| Rupee Extension      | `String.toRupees()`                                  |
 
 ---
 
