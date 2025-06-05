@@ -123,19 +123,29 @@ To resolve iOS-related build or dependency issues, clean and reinstall CocoaPods
 
 ### 🛠 Steps
 
-```bash
-cd ios
+```dart 
+cd ios 
+```
+```dart 
 rm Podfile.lock
+```
+```dart 
 rm -rf Pods
+```
+```dart 
 pod cache clean --all
+```
+```dart 
 pod deintegrate
+```
+```dart 
 pod setup
+```
+```dart 
 pod install
 ```
-
 You may also want to update your pod repo:
 
-```bash
 pod repo update
 ```
 
