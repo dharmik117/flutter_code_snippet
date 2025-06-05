@@ -1,11 +1,13 @@
+
 # 📱 Flutter App Setup Guide
 
 This guide provides useful Flutter commands and configurations for:
 
-- Creating secure APKs and App Bundles
-- Locking screen orientation
-- Enabling edge-to-edge UI in your Flutter app
-- Adding a simple extension for rupee formatting
+- Creating secure APKs and App Bundles  
+- Locking screen orientation  
+- Enabling edge-to-edge UI in your Flutter app  
+- Adding a simple extension for rupee formatting  
+- **Cleaning and deintegrating CocoaPods in iOS**
 
 ---
 
@@ -115,6 +117,30 @@ print(price.toRupees()); // Output: ₹250
 
 ---
 
+## 🧹 5. Deintegrate & Clean CocoaPods (iOS)
+
+To resolve iOS-related build or dependency issues, clean and reinstall CocoaPods:
+
+### 🛠 Steps
+
+```bash
+cd ios
+rm Podfile.lock
+rm -rf Pods
+pod cache clean --all
+pod deintegrate
+pod setup
+pod install
+```
+
+You may also want to update your pod repo:
+
+```bash
+pod repo update
+```
+
+---
+
 ## ✅ Summary
 
 | Feature              | Code/Command                                         |
@@ -125,6 +151,7 @@ print(price.toRupees()); // Output: ₹250
 | Edge-to-Edge Flutter | `EdgeToEdge.configure(...)`                          |
 | Edge-to-Edge Android | `<item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>` |
 | Rupee Extension      | `String.toRupees()`                                  |
+| CocoaPods Cleanup    | `pod deintegrate`, `pod install`, etc.              |
 
 ---
 
