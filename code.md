@@ -144,6 +144,14 @@ pod setup
 ```dart 
 pod install
 ```
+
+```dart 
+rm -rf ~/Library/Developer/Xcode/DerivedData
+```
+
+```dart 
+flutter build ios
+```
 You may also want to update your pod repo:
 
 pod repo update
